@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Pribadi - RAI PUTRA</title>
+  <style>
+    /* ====== GAYA DASAR ====== */
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+
+      /* GANTI FOTO DI SINI 👇 */
+      background-image: url('MEJA.jpg');
+      /* ^ Ganti dengan file lokal kamu, misalnya: url('foto-saya.jpg') */
+
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    /* Lapisan gelap agar teks tetap terbaca */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: -1;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: #ffe15d;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #aaffaa;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    .profile {
+      text-align: center;
+      padding: 40px 20px 20px 20px;
+    }
+
+    .profile img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 3px solid #ffe15d;
+      margin-bottom: 15px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      backdrop-filter: blur(8px);
+      background: rgba(255,255,255,0.15);
+      border-radius: 16px;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px #ffe15d;
+    }
+
+    .card h2 {
+      color: #ffe15d;
+      margin-top: 0;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
+    ul {
+      margin: 10px 0 0 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      background: rgba(0,0,0,0.5);
+      margin-top: 20px;
+      backdrop-filter: blur(5px);
+    }
+
+    /* Animasi masuk */
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .card, .profile, header {
+      animation: fadeIn 1s ease forwards;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1> Portofolio Pribadi</h1>
+    <nav>
+      <a href="#profil">Profil</a>
+      <a href="#visi">Visi & Misi</a>
+      <a href="#hobi">Hobi</a>
+      <a href="#motto">Motto</a>
+      <a href="#cita">Cita-cita</a>
+    </nav>
+  </header>
+
+  <section class="profile" id="profil">
+    <img src="profil.jpg" alt="Foto Profil" />
+    <h2>RAI PUTRA</h2>
+    <p>Alamat: (Jl. Pule Rt.02/Rw.05, Pondok Jaya, KOTA DEPOK)</p>
+    <p>Nomor HP/WA: 0851-5702-5565</p>
+    <p>Saya seorang Drafter di bidang konsultan telekomunikasi biasa menggunakan AutoCad,Sketchup,Revit dan banyak lagi lainnya<br>
+        Sekaligus mahasiswa  Ekstensi Semester 5 Fakultas Teknik Informatika di UNINDRA.<br>
+        Ya walaupun antar dunia kerja dan pendidikan berbeda alur namun saya yakin itu tetap berhubungan dalam dunia software dan pengempbangannya.<br>
+        Dan kedepannya bisa berfokus pada pengembangan kemampuan teknis dan kreativitas visual untuk menghadirkan karya yang berdampak.</p>
+    <p> Dan bisa dilihat di website ini masih bersifat trial and error.<br>
+        Semoga kedepannya bisa lebih berkembang dan menarik dalam segi isi ataupun tampilan.</p>  
+  </section>
+
+  <section class="info-grid">
+    <div class="card" id="visi">
+      <h2>Visi & Misi </h2>
+      <p><strong>Visi:</strong> Visi saya adalah jadi orang yang bisa berkontribusi lewat teknologi dan kreativitas visual..</p>
+      <p><strong>Misi:</strong></p>
+      <ul>
+        <li>Terus belajar.</li>
+        <li>Bikin karya yang berguna.</li>
+        <li>Ikut terlibat dalam project-project yang impactful..</li>
+      </ul>
+    </div>
+
+    <div class="card" id="hobi">
+      <h2>Hobi </h2>
+      <ul>
+        <li>Fotografi dan desain grafis.</li>
+        <li>Game dan Menggambar.</li>
+        <li>Jalan-jalan dan eksplorasi alam.</li>
+        <li>Olahraga atau Nontonin olahraga pun jadi.</li>
+        <li>Hiking pemula (kurleb 5 kali).</li>
+      </ul>
+    </div>
+
+    <div class="card" id="motto">
+      <h2>Motto </h2>
+      <p>"Belajar setiap hari, berkarya supaya ada manfaatnya."</p>
+    </div>
+
+    <div class="card" id="cita">
+      <h2>Cita-cita </h2>
+      <p>Jadi profesional di bidang teknologi kreatif dan bangun karya atau startup yang dikenal luas.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Rai Putra | 16ryputra@gmail.com | All Rights Reserved
+  </footer>
+</body>
+</html>
